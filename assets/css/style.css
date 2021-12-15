@@ -8,8 +8,8 @@
   right: 0;
   width: 35px;
   height: 30px;
-  background: #000;
-  color: #fff;
+  background: var(--dark);
+  color: var(--light);
   cursor: pointer;
   border: 0;
 }
@@ -56,16 +56,17 @@
   visibility: visible;
   opacity: 1;
 }
+
 body.hidden {
   overflow: hidden;
 }
-/* When active class is added, that affects the modal class */
 
-.active + .modal {
+.active+.modal {
   visibility: visible;
   opacity: 1;
   transform: translateY(0);
 }
+
 /* modal css end */
 
 /* cursor css start */
@@ -136,48 +137,21 @@ body.hidden {
 /* fonts css start */
 
 @font-face {
-  font-family: "Comfortaa";
-  src: url("../fonts/Comfortaa-Bold.woff2") format("woff2"),
-    url("../fonts/Comfortaa-Bold.woff") format("woff");
-  font-weight: bold;
+  font-family: "Visiapro";
+  src: url("https://assets.website-files.com/5fc45fe4377fbe7a33caf0fe/5fc46b69f7e1558f1d8e4605_VisiaPro-Bold.otf") format("opentype"),
+    url("https://assets.website-files.com/5fc45fe4377fbe7a33caf0fe/5fc46b69f7e1553c7d8e4606_VisiaPro-BoldOutline.otf") format("opentype");
+  font-weight: 700;
   font-style: normal;
-  font-display: swap;
+  font-display: auto;
 }
 
 @font-face {
-  font-family: "Comfortaa";
-  src: url("../fonts/Comfortaa-Medium.woff2") format("woff2"),
-    url("../fonts/Comfortaa-Medium.woff") format("woff");
-  font-weight: 500;
+  font-family: "Visiapro";
+  src: url("https://assets.website-files.com/5fc45fe4377fbe7a33caf0fe/5fc46b6a0028ca32f83cdded_VisiaPro-Regular.otf") format("opentype"),
+    url("https://assets.website-files.com/5fc45fe4377fbe7a33caf0fe/5fc46b6a6f621639c9c262e0_VisiaPro-RegularOutline.otf") format("opentype");
+  font-weight: 400;
   font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("../fonts/Comfortaa-Light.woff2") format("woff2"),
-    url("../fonts/Comfortaa-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("../fonts/Comfortaa-Regular.woff2") format("woff2"),
-    url("../fonts/Comfortaa-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comfortaa";
-  src: url("../fonts/Comfortaa-SemiBold.woff2") format("woff2"),
-    url("../fonts/Comfortaa-SemiBold.woff") format("woff");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+  font-display: auto;
 }
 
 /* fonts css end */
@@ -200,7 +174,6 @@ body.hidden {
 html {
   height: 100%;
   scroll-behavior: smooth;
-  /* background-color: var(--dark); */
 }
 
 ul,
@@ -220,11 +193,10 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  /* cursor: none; */
 }
 
 body {
-  font-family: "Comfortaa";
+  font-family: "Visiapro";
 }
 
 a {
@@ -232,8 +204,9 @@ a {
   display: inline-block;
   cursor: none;
 }
+
 div {
-    cursor: none;
+  cursor: none;
 }
 
 .container {
@@ -246,29 +219,34 @@ div {
 h1 {
   display: inline-block;
   margin-top: 20px;
-  margin-bottom: 10px;
-  color: var(--dark);
   font-size: 12vw;
   line-height: 1em;
   font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--dark);
+  animation: move 1.5s;
+  transform-origin: top left;
+}
+
+@keyframes move {
+  from {
+    transform: rotate3d(1, 1, 1, 0deg) skewY(10deg) rotateX(10deg);
+    opacity: 0;
+  }
+
+  to {
+    transform: rotate3d(1, 1, 1, 0deg) skewY(0deg) rotateX(0deg);
+    opacity: 1;
+  }
 }
 
 h1 span {
   display: block;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(
-    90deg,
-    var(--dark) 47%,
-    rgb(254 254 254 / 0%) 46%
-  );
-  background-size: 250% 100%;
-  background-position: 100%;
 }
 
 h2 {
   margin-top: 20px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   color: var(--dark);
   font-size: 7em;
   line-height: 0.9em;
@@ -280,6 +258,7 @@ section {
   padding: 100px 6%;
   cursor: none;
 }
+
 section.popup {
   position: relative;
   z-index: -1;
@@ -289,6 +268,7 @@ section.popup {
   from {
     -webkit-transform: rotate(0deg);
   }
+
   to {
     -webkit-transform: rotate(360deg);
   }
@@ -370,7 +350,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 1;
 }
 
-.right-navbar nav {
+/* .right-navbar nav {
   position: absolute;
   transform: rotate(-90deg);
   inset: auto -115% 55vh auto;
@@ -381,6 +361,21 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   position: absolute;
   inset: auto -86% 28.1vh auto;
+} */
+
+.right-navbar nav .navbar {
+  position: absolute;
+  left: auto;
+  top: auto;
+  right: -65%;
+  bottom: 28.1vh;
+  display: grid;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .right-navbar .navbar li a {
@@ -392,6 +387,7 @@ body::-webkit-scrollbar-thumb {
   position: relative;
   margin: 0 20px;
 }
+
 .right-navbar .navbar li.active a::after {
   content: "";
   position: absolute;
@@ -447,6 +443,42 @@ header {
   cursor: none;
 }
 
+.hero-title-wrap p {
+  font-size: 36px;
+  max-width: 600px;
+  line-height: 1.4;
+  margin-top: 70px;
+}
+
+.hero-title-wrap p span {
+  display: block;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(90deg,
+      var(--dark) 47%,
+      rgb(254 254 254 / 0%) 46%);
+  background-size: 250% 100%;
+  background-position: 100%;
+}
+
+.scroll-btn {
+  padding: 120px 0 40px;
+  max-width: 160px;
+  /* margin-left: auto; */
+  /* margin-right: 50px; */
+  transform: translateY(50%);
+  margin: 0 auto;
+}
+
+.scroll-btn a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  color: var(--dark);
+  font-weight: bold;
+}
+
 /* hero css end */
 
 /* projects css start */
@@ -468,15 +500,13 @@ header {
 .projects .project-title {
   position: absolute;
   inset: 40% -100px 0 auto;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transition: 0.5s;
   transform-style: preserve-3d;
 }
 
 .projects .project:hover .project-title {
-  transform: translate3d(0px, 0px, 0px) scale3d(1.3, 1.3, 1.3) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1.3, 1.3, 1.3) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 }
 
 .projects .project-image {
@@ -490,14 +520,12 @@ header {
   box-shadow: rgb(0 0 0 / 10%) -3px 9px 20px 2px;
   background-repeat: no-repeat;
   transition: 0.5s;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
   transform-style: preserve-3d;
 }
 
 .projects .project:hover .project-image {
-  transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 0.9) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 0.9) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
 }
 
 .projects .project1-image {
@@ -539,12 +567,14 @@ header {
   text-align: center;
   cursor: none;
 }
+
 .about h3,
 .about span {
   transition-property: all;
   transition-duration: 400ms;
   transition-timing-function: ease;
 }
+
 .about h3 {
   color: var(--dark);
   font-size: 10em;

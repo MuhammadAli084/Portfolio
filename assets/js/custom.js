@@ -48,3 +48,9 @@ $(selector).on('click', function(){
     $(selector).removeClass('active');
     $(this).addClass('active');
 });
+
+// $(".scroll-btn").click(function() {
+//   $('html,body').animate({
+//       scrollTop: $("#projects").offset().top},
+//       'slow');
+// });

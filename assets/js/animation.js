@@ -1,6 +1,10 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to("h1 span", 1, { 'background-position': 0, stagger: 1 });
+gsap.to(".hero-title-wrap p span", 2, { 'background-position': 0, stagger: 1 });
+
+gsap.to(".scroll-btn", 1, { 
+    y:"0%"
+ });
 
 gsap.fromTo(
     ".logo,.play-btn",
