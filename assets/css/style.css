@@ -856,6 +856,7 @@ section.about {
   font-size: 30px;
   line-height: 48px;
   font-weight: 700;
+  color: var(--dark);
 }
 
 .social-media {
@@ -875,10 +876,19 @@ section.about {
 /* about css end */
 
 /* contact css start */
+@keyframes scale {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
 section.contact {
   min-height: 100vh;
   padding-top: 200px;
-  animation: move 1.5s;
+  animation: scale 1.5s;
 }
 section.contact h2 {
   max-width: 50%;
