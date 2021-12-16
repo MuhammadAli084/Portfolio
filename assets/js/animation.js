@@ -29,8 +29,8 @@ $(document).ready(function() {
     TweenMax.to({}, 0.016, {
         repeat: -1,
         onRepeat: function() {
-            posX += (mouseX - posX) / 9;
-            posY += (mouseY - posY) / 9;
+            posX += (mouseX - posX) / 5;
+            posY += (mouseY - posY) / 5;
 
             TweenMax.set(follower, {
                 css: {
