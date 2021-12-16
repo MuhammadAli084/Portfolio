@@ -29,7 +29,7 @@
                     }
 
                     .st1 {
-                        fill: #1F1F1F;
+                        fill: var(--dark);
                     }
 
                     .st2 {
@@ -77,7 +77,10 @@
 
     <header>
         <div class="container">
-            <!-- <input type="switch"> -->
+            <label class="switch">
+                <input id='switch-btn' type="checkbox">
+                <span class="slider round"></span>
+            </label>
         </div>
     </header>
     <!-- banner sec start -->
@@ -95,7 +98,7 @@
                 </p>
                 <div class="scroll-btn">
                     <a href="#projects">
-                        <div class="bullet"><img src="assets/images/arrow-down.svg" alt=""></div>
+                        <div class="bullet"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
                         <span>Scroll Down</span>
                     </a>
                 </div>

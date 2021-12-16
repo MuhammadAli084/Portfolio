@@ -39,14 +39,13 @@ $(document).keyup(function (e) {
   }
 });
 
-
 // function for navbar
 
-var selector = '.navbar li';
+var selector = ".navbar li";
 
-$(selector).on('click', function(){
-    $(selector).removeClass('active');
-    $(this).addClass('active');
+$(selector).on("click", function () {
+  $(selector).removeClass("active");
+  $(this).addClass("active");
 });
 
 // $(".scroll-btn").click(function() {
@@ -54,3 +53,12 @@ $(selector).on('click', function(){
 //       scrollTop: $("#projects").offset().top},
 //       'slow');
 // });
+
+$(document).ready(function () {
+  if (localStorage.getItem("a")) {
+    $("#switch-btn").attr("checked", "");
+  }
+  $("#switch-btn").click(function(){
+    $(":root").toggleClass("dark-mode");
+  });
+});

@@ -8,9 +8,9 @@
   right: 0;
   width: 35px;
   height: 30px;
-  background: var(--dark);
-  color: var(--light);
-  cursor: pointer;
+  background: #000;
+  color: #fff;
+  cursor: none;
   border: 0;
 }
 
@@ -70,22 +70,6 @@ body.hidden {
 /* modal css end */
 
 /* cursor css start */
-
-/* .cursor {
-  position: fixed;
-  background-color: var(--dark);
-  width: 10px;
-  height: 10px;
-  border-radius: 100%;
-  z-index: 1;
-  transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-    0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
-  user-select: none;
-  pointer-events: none;
-  z-index: 10000;
-  transform: scale(1);
-} */
-
 .cursor.active {
   opacity: 1;
   transform: scale(0);
@@ -159,10 +143,19 @@ body.hidden {
 /* global css start */
 
 :root {
-  --primary: #132573;
+  --primary: rgba(31, 31, 31, 0.2);
   --secondary: #f5f5f5;
   --light: #fff;
   --dark: #000;
+  --body-bg: #fff;
+}
+
+:root.dark-mode {
+  --primary: rgba(255, 255, 255, 0.2);
+  --secondary: #000;
+  --light: #000;
+  --dark: #fff;
+  --body-bg: rgba(31, 31, 31);
 }
 
 * {
@@ -197,6 +190,8 @@ body {
 
 body {
   font-family: "Visiapro";
+  background-color: var(--body-bg);
+  position: relative;
 }
 
 a {
@@ -298,7 +293,7 @@ body::-webkit-scrollbar-thumb {
   width: 1px;
   height: 60vh;
   margin-left: 18px;
-  background-color: rgba(31, 31, 31, 0.2);
+  background-color: var(--primary);
 }
 
 .progress {
@@ -323,7 +318,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 9999;
 }
 
 .logo {
@@ -348,7 +343,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 9999;
 }
 
 /* .right-navbar nav {
@@ -418,20 +413,89 @@ body::-webkit-scrollbar-thumb {
 
 .right-navbar .play-btn .bullet i {
   font-size: 24px;
+  color: var(--dark);
 }
 
 /* right-nav-bar css end */
 
+
+/* switch btn css start */
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 27px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--secondary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--dark);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: var(--dark);
+}
+
+input:checked+.slider:before {
+  transform: translate(30px, -50%);
+  background-color: var(--light);
+}
+
+
+/* Rounded sliders */
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* switch btn css end */
+
 /* header css start */
 
 header {
-  padding: 30px 0;
+  padding: 40px 0;
   width: 100%;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
   cursor: none;
+  z-index: 1;
 }
 
 /* header css end */
@@ -462,38 +526,16 @@ header {
   background-position: 100%;
 }
 
-/* @keyframes bounce-out-down {
+@keyframes bounce-out-down {
   0% {
     transform: translateY(0);
   }
-
   20% {
-    opacity: 0;
     transform: translateY(-20px);
   }
 
   100% {
-    opacity: 1;
     transform: translateY(20px);
-  }
-} */
-@keyframes bounce-in-right {
-  0% {
-    opacity: 0;
-    transform: translateX(2000px);
-  }
-
-  60% {
-    opacity: 1;
-    transform: translateX(-30px);
-  }
-
-  80% {
-    transform: translateX(10px);
-  }
-
-  100% {
-    transform: translateX(30px);
   }
 }
 
@@ -502,8 +544,7 @@ header {
   max-width: 160px;
   margin-left: auto;
   margin-right: 50px;
-  /* animation: bounce-out-down 2s ease infinite; */
-  animation: bounce-in-right 2s ease;
+  animation: bounce-out-down 3s ease infinite;
 }
 
 .scroll-btn a {
@@ -515,6 +556,10 @@ header {
   font-weight: bold;
 }
 
+.scroll-btn .bullet {
+  font-size: 40px;
+  color: var(--dark);
+}
 /* hero css end */
 
 /* projects css start */
@@ -618,20 +663,24 @@ header {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .about span {
   font-size: 24px;
-  line-height: 24px;
+  line-height: 30px;
   font-weight: 700;
   text-transform: capitalize;
   /* text-align: center; */
   color: var(--dark);
 }
 
-.about:hover h3,
-.about:hover span {
+.about:hover h3 {
   letter-spacing: 0.3em;
+}
+
+.about:hover span {
+  letter-spacing: 1.5em;
 }
 
 /* about css end */
