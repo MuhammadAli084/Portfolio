@@ -248,6 +248,15 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: var(--dark);
+  font-size: 3em;
+  line-height: 1em;
+  font-weight: 700;
+}
+
 p {
   margin-bottom: 10px;
   font-size: 18px;
@@ -649,9 +658,9 @@ header {
 
 /* projects css end */
 
-/* about css start */
+/* scale-text css start */
 
-.about {
+.scale-text {
   display: block;
   width: auto;
   margin-right: 10px;
@@ -662,14 +671,14 @@ header {
   cursor: none;
 }
 
-.about h3,
-.about span {
+.scale-text h3,
+.scale-text span {
   transition-property: all;
   transition-duration: 400ms;
   transition-timing-function: ease;
 }
 
-.about h3 {
+.scale-text h3 {
   color: var(--dark);
   font-size: 10em;
   line-height: 1em;
@@ -679,7 +688,7 @@ header {
   margin-bottom: 10px;
 }
 
-.about span {
+.scale-text span {
   font-size: 24px;
   line-height: 30px;
   font-weight: 700;
@@ -688,15 +697,15 @@ header {
   color: var(--dark);
 }
 
-.about:hover h3 {
+.scale-text:hover h3 {
   letter-spacing: 0.3em;
 }
 
-.about:hover span {
+.scale-text:hover span {
   letter-spacing: 1.5em;
 }
 
-/* about css end */
+/* scale-text css end */
 
 
 /* press css start */
@@ -785,6 +794,7 @@ section.press {
     transform: translate3d(-137.176%, 0px, 0px);
   }
 }
+
 .text-moving-section {
   overflow: hidden;
   padding: 0 0 110px;
@@ -805,3 +815,126 @@ section.press {
 }
 
 /* press css end */
+
+/* about css start */
+
+section.about {
+  padding-top: 34vh;
+  overflow-x: initial;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-content {
+  display: flex;
+  padding-top: 30vh;
+}
+
+.about-image-contain {
+  width: 45%;
+}
+
+.about-image {
+  position: sticky;
+  top: 160px;
+  width: 100%;
+  height: 500px;
+  min-height: 75vh;
+  background-image: url(/assets/images/about-img.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.about-bio {
+  padding: 32px 64px;
+  flex: 1;
+}
+
+.large {
+  font-size: 30px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.social-media {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 12px;
+  padding-top: 24px;
+  padding-right: 30px;
+  padding-bottom: 24px;
+  color: var(--dark);
+  font-size: 24px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* about css end */
+
+/* contact css start */
+section.contact {
+  min-height: 100vh;
+  padding-top: 200px;
+  animation: move 1.5s;
+}
+section.contact h2 {
+  max-width: 50%;
+}
+
+.contact-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-heading {
+  font-size: 8vw;
+  line-height: 1em;
+}
+
+.form-block {
+  padding-right: 50px;
+  padding-left: 30px;
+  /* max-width: 50%; */
+  width: 100%;
+}
+
+.form-field {
+  height: 80px;
+  margin-bottom: 32px;
+  padding-left: 10px;
+  border-style: none none solid;
+  border-width: 1px;
+  border-color: var(--dark) var(--dark) var(--dark);
+  background-color: transparent;
+  transition: all 350ms ease;
+  font-size: 18px;
+  cursor: none;
+  width: 100%;
+}
+
+.form-field.message {
+  padding-top: 24px;
+  padding-bottom: 102px;
+  height: auto;
+  resize: none;
+}
+.form-field:focus-visible {
+  outline: none;
+  background-color: var(--light);
+}
+
+.submit-button {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+/* contact css end */

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Contact</title>
     <link href="assets/css/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -67,10 +67,10 @@
         <!-- modal end -->
         <nav>
             <ul class="navbar">
-                <li><a href="#contact.html">contact</a></li>
+                <li class="active"><a href="contact.html">contact</a></li>
                 <li><a href="about.html">about</a></li>
                 <li><a href="press.html">press</a></li>
-                <li class="active"><a href="#">home</a></li>
+                <li><a href="index.html">home</a></li>
             </ul>
         </nav>
     </div>
@@ -83,65 +83,29 @@
             </label>
         </div>
     </header>
-    <!-- banner sec start -->
-    <section>
+    <!-- press sec start -->
+    <section class="contact">
         <div class="container">
-            <div class="hero-title-wrap">
-                <h1>
-                    <span>Front-End</span>
-                    <span></span>
-                    <span>Developer</span>
-                </h1>
-                <p>
-                    <span>I design and develop experiences</span>
-                    <span>that make people’s lives simple.</span>
-                </p>
-                <div class="scroll-btn">
-                    <a href="#projects">
-                        <div class="bullet"><i class="fa fa-angle-down" aria-hidden="true"></i></div>
-                        <span>Scroll Down</span>
-                    </a>
+            <div class="contact-wrap">
+                <h2 class="contact-heading">Let's build something beautiful!</h2>
+                <div class="form-block">
+                    <form id="email-form" name="email-form" data-name="Email Form">
+                        <input type="text" class="form-field" maxlength="256" name="Full-Name" placeholder="Your Full Name " id="Full-Name" required="">
+                        <input type="email" class="form-field cs_cursor" maxlength="256" name="Email" placeholder="Your Email" id="Email" required="">
+                        <textarea placeholder="Your Message..." maxlength="5000" id="Message" name="Message" required="" class="form-field message"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                        </form>
+                    <!-- <div class="success-message w-form-done">
+                        <div class="text-block">Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div> -->
                 </div>
             </div>
-            <div id="projects" class="projects-wrap" data-aos="fade-in" data-aos-duration="3000">
-                <div class="projects">
-                    <a href="#" class="project">
-                        <div class="project-image project1-image"></div>
-                        <div class="project-title">
-                            <h2>Little <br> Tokyo</h2>
-                            <span>Design & Front-End</span>
-                        </div>
-                    </a>
-                    <a href="#" class="project">
-                        <div class="project-image project2-image"></div>
-                        <div class="project-title">
-                            <h2>Simple <br> Pay</h2>
-                            <span>Design & Front-End</span>
-                        </div>
-                    </a>
-                    <a href="#" class="project">
-                        <div class="project-image project3-image"></div>
-                        <div class="project-title">
-                            <h2>Appearl</h2>
-                            <span>Creative Direction & Branding</span>
-                        </div>
-                    </a>
-                    <a href="#" class="project">
-                        <div class="project-image project4-image"></div>
-                        <div class="project-title">
-                            <h2>Auto <br> Luxury</h2>
-                            <span>Front-End Dev</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <a href="about.html" class="scale-text">
-                <h3>About</h3>
-                <span>Learn More</span>
-            </a>
         </div>
     </section>
-    <!-- banner sec end -->
+    <!-- press sec end -->
 
     <!-- cursor start -->
     <div class="cursor"></div>
