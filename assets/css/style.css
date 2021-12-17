@@ -630,10 +630,15 @@ header {
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) translateY(-50%);
 }
 
+.project-image-wrap {
+  overflow: hidden;
+  max-width: 85%;
+  position: relative;
+}
+
 .projects .project-image {
   position: relative;
   height: 550px;
-  max-width: 85%;
   min-height: 70vh;
   margin-right: 0px;
   background-position: 50% 20%;
@@ -675,7 +680,6 @@ header {
   line-height: 20px;
   font-weight: 700;
 }
-
 /* projects css end */
 
 /* scale-text css start */
