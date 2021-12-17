@@ -604,7 +604,7 @@ header {
 
 .projects .project-title {
   position: absolute;
-  inset: 50% -100px 0 auto;
+  inset: 60% -100px 0 auto;
   transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
     rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg) translateY(-50%);
   transition: 0.5s;
