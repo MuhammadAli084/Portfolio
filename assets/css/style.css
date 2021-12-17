@@ -362,6 +362,8 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
+  font-family: 'Smooch';
+  letter-spacing: 2;
 }
 
 /* left-nav-bar css end */
@@ -808,7 +810,7 @@ section.press {
   color: #000;
 }
 
-@keyframes moving {
+/* @keyframes moving {
   from {
     transform: translate3d(0, 0px, 0px);
   }
@@ -816,7 +818,7 @@ section.press {
   to {
     transform: translate3d(-137.176%, 0px, 0px);
   }
-}
+} */
 
 .text-moving-section {
   overflow: hidden;
@@ -827,7 +829,7 @@ section.press {
   width: 960vw;
   margin-left: 142px;
   font-size: 20vw;
-  animation: moving 80s linear infinite;
+  /* animation: moving 80s linear infinite; */
   display: inline-block;
   margin-top: 20px;
   margin-bottom: 10px;
@@ -835,6 +837,8 @@ section.press {
   line-height: 0.8em;
   font-weight: 700;
   cursor: none;
+  /* transform: rotateZ(20deg);
+  transform-origin: top left; */
 }
 
 /* press css end */

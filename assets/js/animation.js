@@ -46,7 +46,21 @@ tl.to(
     },
     "start"
   );
-// tl.to(".project-title", 1, { x:"-100%", opacity: 1  , stagger: { amount: 2.5 }});
+tl.to(".project-title", 1, { x:"-100%", opacity: 1  , stagger: { amount: 2.5 }});
+
+let tls1 = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".text-moving-section",
+      start: "10% 30%",
+    //   markers: true,
+      scrub: 2,
+      toggleActions: "restart pause resume reverse",
+      end: "+=450%",
+      pin: true, 
+    },
+});
+tls1.to(".scrolling-text", 5, { x:"-90%" });
+// tls1.to(".scrolling-text", 5, { x:"-100%" ,rotationZ: '20deg',});
   // CURSOR
   var cursor = $(".cursor"),
     follower = $(".cursor-follower");
