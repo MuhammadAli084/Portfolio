@@ -46,7 +46,6 @@ tl.to(
     },
     "start"
   );
-tl.to(".project-title", 1, { x:"-100%", opacity: 1  , stagger: { amount: 2.5 }});
 
 let tls1 = gsap.timeline({
     scrollTrigger: {

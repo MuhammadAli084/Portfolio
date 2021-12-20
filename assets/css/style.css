@@ -362,7 +362,7 @@ body::-webkit-scrollbar-thumb {
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Smooch';
+  font-family: "Smooch";
   letter-spacing: 2;
 }
 
