@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Smooch&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+    <div class="left-navbar">
+        <a class="logo" href="index.html">Muhammad Ali</a>
+        <div class="progress-bar">
+            <div class="progress"></div>
+        </div>
+    </div>
+    <div class="right-navbar">
+        <a class="play-btn">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="164.4px" height="164.4px"
+                viewBox="0 0 164.4 164.4" style="enable-background:new 0 0 164.4 164.4;" xml:space="preserve">
+                <style type="text/css">
+                    .st0 {
+                        fill: none;
+                    }
+
+                    .st1 {
+                        fill: var(--dark);
+                    }
+
+                    .st2 {
+                        font-family: "Visiapro";
+                        font-weight: bold;
+                    }
+
+                    .st3 {
+                        font-size: 21.5143px;
+                    }
+                </style>
+                <circle class="st0" cx="82.2" cy="82.2" r="61.3" />
+                <text transform="matrix(-0.9171 0.3987 -0.3987 -0.9171 111.791 136.1172)">
+                    <tspan x="0" y="0" class="st1 st2 st3">P</tspan>
+                    <tspan x="30.3" y="4.9" class="st1 st2 st3" rotate="29.5">L</tspan>
+                    <tspan x="55.3" y="24.7" class="st1 st2 st3" rotate="60.7">A</tspan>
+                    <tspan x="67" y="55.1" class="st1 st2 st3" rotate="90.5">Y</tspan>
+                    <tspan x="61.1" y="87.4" class="st1 st2 st3" rotate="117.9"> </tspan>
+                    <tspan x="46" y="108" class="st1 st2 st3" rotate="146.2">V</tspan>
+                    <tspan x="14.5" y="121.9" class="st1 st2 st3" rotate="174">I</tspan>
+                    <tspan x="-10.1" y="120.9" class="st1 st2 st3" rotate="-158.5">D</tspan>
+                    <tspan x="-39" y="103.8" class="st1 st2 st3" rotate="-127.3">E</tspan>
+                    <tspan x="-54.7" y="75.1" class="st1 st2 st3" rotate="-94.4">O</tspan>
+                </text>
+            </svg>
+            <div class="bullet">
+                <i class="fa fa-play" aria-hidden="true"></i>
+            </div>
+        </a>
+        <!-- modal start -->
+        <div class="mask" role="dialog"></div>
+        <div class="modal" role="alert">
+            <button class="close" role="button">X</button>
+        </div>
+        <!-- modal end -->
+        <nav>
+            <ul class="navbar">
+                <li class="active"><a href="contact.html">contact</a></li>
+                <li><a href="about.html">about</a></li>
+                <li><a href="press.html">press</a></li>
+                <li><a href="index.html">home</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <header>
+        <div class="container">
+            <label class="switch">
+                <input id='switch-btn' type="checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </header>
+    <!-- press sec start -->
+    <section class="contact">
+        <div class="container">
+            <div class="contact-wrap">
+                <h2 class="contact-heading">Let's build something beautiful!</h2>
+                <div class="form-block">
+                    <form id="email-form" name="email-form" data-name="Email Form">
+                        <input type="text" class="form-field" maxlength="256" name="Full-Name" placeholder="Your Full Name " id="Full-Name" required="">
+                        <input type="email" class="form-field cs_cursor" maxlength="256" name="Email" placeholder="Your Email" id="Email" required="">
+                        <textarea placeholder="Your Message..." maxlength="5000" id="Message" name="Message" required="" class="form-field message"></textarea>
+                        <input type="submit" value="Submit" class="submit-button">
+                        </form>
+                    <!-- <div class="success-message w-form-done">
+                        <div class="text-block">Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="w-form-fail">
+                        <div>Oops! Something went wrong while submitting the form.</div>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- press sec end -->
+
+    <!-- cursor start -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <!-- cursor end -->
+
+    <!-- script start -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js "></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <!-- script end -->
+</body>
+
+</html>
