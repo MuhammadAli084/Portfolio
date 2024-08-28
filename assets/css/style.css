@@ -659,26 +659,28 @@ header {
     transition: 0.5s;
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
+    filter: grayscale(1);
 }
 
 .projects .project:hover .project-image {
     transform: translate3d(0px, 0px, 0px) scale3d(0.9, 0.9, 0.9) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+    filter: grayscale(1);
 }
 
 .projects .project1-image {
-    background-image: url("../images/hand.jpg");
+    background-image: url("../images/test\ \(1\).png");
 }
 
 .projects .project2-image {
-    background-image: url("../images/girl.jpg");
+    background-image: url("../images/test\ \(4\).png");
 }
 
 .projects .project3-image {
-    background-image: url("../images/girl2.jpg");
+    background-image: url("../images/test\ \(2\).png");
 }
 
 .projects .project4-image {
-    background-image: url("../images/car.jpg");
+    background-image: url("../images/test\ \(3\).png");
 }
 
 .projects span {
